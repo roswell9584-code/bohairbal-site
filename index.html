@@ -1,9 +1,80 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Bohairbal</title>
-  </head>
-  <body>
-    <h1>Welcome to Bohairbal</h1>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- ONLY EDIT THE DATA INSIDE THIS BLOCK -->
+    <script>
+        const siteData = {
+            brandName: "HERBAL CARE CO.",
+            heroTitle: "Premium Herbal Solutions for Vitality",
+            heroSub: "Experience the power of nature with our organic, hand-crafted formulations designed for your hair health.",
+            heroImage: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+            
+            // YouTube: Paste the ID found after 'v=' in the URL
+            youtubeVideoId: "dQw4w9WgXcQ", 
+            
+            // Features
+            feature1Title: "100% Organic",
+            feature1Desc: "Sourced from the finest local botanical farms.",
+            feature2Title: "Cruelty-Free",
+            feature2Desc: "We never test on animals, ever.",
+            feature3Title: "Fast Results",
+            feature3Desc: "See the difference in just two weeks."
+        };
+    </script>
+    <!-- STOP EDITING -->
+
+    <!-- Header -->
+    <header class="p-6 bg-white shadow-sm text-center font-bold text-xl" id="brand-name"></header>
+
+    <!-- Hero -->
+    <section class="max-w-4xl mx-auto py-16 px-4 text-center">
+        <h1 class="text-5xl font-extrabold mb-6" id="hero-title"></h1>
+        <p class="text-xl text-gray-600 mb-8" id="hero-sub"></p>
+        <img id="hero-img" class="w-full rounded-2xl shadow-2xl mb-12">
+        
+        <!-- Video -->
+        <div class="aspect-video w-full">
+            <iframe id="video" class="w-full h-full rounded-xl" src="" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 py-16 px-4">
+        <div class="p-6 bg-white rounded-xl shadow-sm">
+            <h3 class="font-bold text-lg" id="f1-t"></h3>
+            <p class="text-gray-500" id="f1-d"></p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm">
+            <h3 class="font-bold text-lg" id="f2-t"></h3>
+            <p class="text-gray-500" id="f2-d"></p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm">
+            <h3 class="font-bold text-lg" id="f3-t"></h3>
+            <p class="text-gray-500" id="f3-d"></p>
+        </div>
+    </section>
+
+    <script>
+        // Injecting the data into the page
+        document.getElementById('brand-name').innerText = siteData.brandName;
+        document.getElementById('hero-title').innerText = siteData.heroTitle;
+        document.getElementById('hero-sub').innerText = siteData.heroSub;
+        document.getElementById('hero-img').src = siteData.heroImage;
+        document.getElementById('video').src = "https://www.youtube.com/embed/" + siteData.youtubeVideoId;
+        
+        document.getElementById('f1-t').innerText = siteData.feature1Title;
+        document.getElementById('f1-d').innerText = siteData.feature1Desc;
+        document.getElementById('f2-t').innerText = siteData.feature2Title;
+        document.getElementById('f2-d').innerText = siteData.feature2Desc;
+        document.getElementById('f3-t').innerText = siteData.feature3Title;
+        document.getElementById('f3-d').innerText = siteData.feature3Desc;
+    </script>
+</body>
 </html>
